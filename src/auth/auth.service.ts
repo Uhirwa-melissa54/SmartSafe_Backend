@@ -3,7 +3,6 @@ import * as argon2 from "argon2"
 import { JwtService } from '@nestjs/jwt';
 import { UserDto } from "src/Dto/UserDto";
 import { PrismaService } from "src/prisma/prisma.service";
-import { createDecipheriv } from "crypto";
 import { SignUp } from "src/Dto/signUpDto";
 
 @Injectable()
