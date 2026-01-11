@@ -10,7 +10,7 @@ export class AuthService{
  constructor(private prisma:PrismaService,private jwtService:JwtService){
 
 }
-    async signUp(user:UserDto,res:Response) :Promise<SignUp>{
+    async signUp(user:UserDto) :Promise<SignUp>{
         const hashedPassword=await argon2.hash(user.password,{
             type:argon2.argon2id
         }
@@ -53,7 +53,7 @@ export class AuthService{
     }
     else{
         return {
-             name:"No name",
+        name:"No name",
         token:"No token",
         status:"500"
         }
