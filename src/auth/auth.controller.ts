@@ -5,7 +5,10 @@ import { UserDto } from "src/Dto/UserDto";
 export class AuthController{
     @Post('signup')
     async signUp(@Body() user:UserDto){
-        const user=
+        const returnedUser= await this.signUp(user);
+        if(returnedUser==null){
+            return 
+        }
 
     }
 }
